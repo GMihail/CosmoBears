@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.Events;
 
+[RequireComponent(typeof(Outline))]
+
 public class InteractableObject : MonoBehaviour
 {
     [SerializeField] private UnityEvent _useEvent;

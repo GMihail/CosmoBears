@@ -4,12 +4,28 @@ using Unity.VisualScripting;
 using UnityEngine;
 public class Outline : MonoBehaviour
 {
+    [SerializeField] private Material[] _materials;
+    [SerializeField] private Material _outline;
+    private MeshRenderer mesh;
+  
     private void Start()
     {
-        //Material[] materials = new Material[]
-        //    {
-        //        Resources.Load("Materials/Outline") as Material,
-        //    };
-        this.GetComponent<MeshRenderer>().materials[0] = Resources.Load("Materials/Outline") as Material;
+        mesh = GetComponent<MeshRenderer>();
+        _materials = new Material[mesh.materials.Length + 1];
+        _materials[0] = mesh.materials[0];
+    }
+    private void SetOutline(Material mat)
+    {
+        _materials[_materials.Length - 1] = mat;
+        mesh.materials = _materials;
+    }
+
+    public void Show()
+    {
+        SetOutline(_outline);
+    }
+    public void Hide()
+    {
+        SetOutline(mesh.materials[0]);
     }
 }

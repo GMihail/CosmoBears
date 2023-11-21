@@ -1,4 +1,5 @@
 using GoSystem;
+using StarterAssets;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -33,14 +34,14 @@ public class DialogueManager : MonoBehaviour
     }
     private void OnEnable()
     {
-        FindObjectOfType<GoCharacterController>().enabled = false;
+        FindObjectOfType<ThirdPersonController>().enabled = false;
         FindObjectOfType<GoCameraSystem>().enabled = false;
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
     }
     private void OnDisable()
     {
-        FindObjectOfType<GoCharacterController>().enabled = true;
+        FindObjectOfType<ThirdPersonController>().enabled = true;
         FindObjectOfType<GoCameraSystem>().enabled = true;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
