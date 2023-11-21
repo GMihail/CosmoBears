@@ -30,6 +30,7 @@ namespace GoSystem {
         private Transform _target;
         private RaycastHit hit;
         private GoCharacterController cc;
+        public bool _aiming;
         private void Start()
         {
             _DistenceCamera = DistenceWalking;
@@ -116,18 +117,22 @@ namespace GoSystem {
         }
         private void PositionCameraBehaviour()
         {
-            if (InputCameraSystem.MoveAxis == input3.ComputerAndConsole )
+            if (!_aiming)
             {
-                x += Input.GetAxis(mosuex) * CameraSensitivity;
-                y -= Input.GetAxis(mosuey) * CameraSensitivity;
-                MovePosition();
+                if (InputCameraSystem.MoveAxis == input3.ComputerAndConsole)
+                {
+                    x += Input.GetAxis(mosuex) * CameraSensitivity;
+                    y -= Input.GetAxis(mosuey) * CameraSensitivity;
+                    MovePosition();
+                }
+                else
+                {
+                    x = InputCameraSystem.TouchSpace.newCameraAxis.x * InputCameraSystem.panSpeed;
+                    y = InputCameraSystem.TouchSpace.newCameraAxis.y * InputCameraSystem.panSpeed;
+                    MovePosition();
+                }
             }
-            else
-            {
-                x = InputCameraSystem.TouchSpace.newCameraAxis.x * InputCameraSystem.panSpeed;
-                y = InputCameraSystem.TouchSpace.newCameraAxis.y * InputCameraSystem.panSpeed;
-                MovePosition();
-            }
+           
         }
         private void MovePosition()
         {
