@@ -26,7 +26,7 @@ public class ThirdPersonShooterController : MonoBehaviour
         Vector2 screenCenterPoint = new Vector2(Screen.width / 2f, Screen.height / 2);
 
         Ray ray = Camera.main.ScreenPointToRay(screenCenterPoint);
-        if(Physics.Raycast(ray,out RaycastHit raycastHit, 999f, AimLayerMask))
+        if(Physics.Raycast(ray,out RaycastHit raycastHit, 250f, AimLayerMask))
         {
             mousWordPos = raycastHit.point;
         }
