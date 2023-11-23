@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class DoorTrigger : MonoBehaviour
 {
-    [SerializeField] private GameObject _actionsWithDoor;
+    //[SerializeField] private GameObject _actionsWithDoor;
     [SerializeField] private Slider _openSlider;
     [SerializeField] private Transform _door;
     [SerializeField] private float _offsetY;
@@ -16,16 +16,16 @@ public class DoorTrigger : MonoBehaviour
         _openSlider.minValue = _door.position.y;
         _openSlider.maxValue = _door.position.y + _offsetY;
     }
-    private void OnTriggerEnter(Collider other)
-    {
-        _actionsWithDoor.SetActive(true);
-        Cursor.lockState = CursorLockMode.None;
-    }
-    private void OnTriggerExit(Collider other)
-    {
-        _actionsWithDoor.SetActive(false);
-        Cursor.lockState = CursorLockMode.Locked;
-    }
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    _actionsWithDoor.SetActive(true);
+    //    Cursor.lockState = CursorLockMode.None;
+    //}
+    //private void OnTriggerExit(Collider other)
+    //{
+      //  _actionsWithDoor.SetActive(false);
+        //Cursor.lockState = CursorLockMode.Locked;
+    //}
     public void OpenButton()
     { 
         _openSlider.gameObject.SetActive(true);

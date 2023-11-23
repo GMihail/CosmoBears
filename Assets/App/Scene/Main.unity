@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1351.3082, g: 1738.7949, b: 3336.526, a: 1}
+  m_IndirectSpecularColor: {r: 1351.3082, g: 1737.2781, b: 3167.75, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -20878,6 +20878,74 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.07709326, y: 0.20641235, z: -0.089613676}
     m_Extent: {x: 0.01121489, y: 0.06579133, z: 0.06663218}
   m_DirtyAABB: 0
+--- !u!1 &1281606654
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1281606655}
+  - component: {fileID: 1281606656}
+  - component: {fileID: 1281606657}
+  m_Layer: 0
+  m_Name: Trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1281606655
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1281606654}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 369.53, y: 0.53, z: 365.512}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1941439245}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1281606656
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1281606654}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.4714661, y: 2.6070774, z: 1.2132263}
+  m_Center: {x: 0, y: 0.6, z: -0.5}
+--- !u!114 &1281606657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1281606654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70614e87e5c25f247b920f79593e1e15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _actionsWithDoor: {fileID: 135340950}
 --- !u!1 &1292177500
 GameObject:
   m_ObjectHideFlags: 0
@@ -32480,7 +32548,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1941439245}
   - component: {fileID: 1941439244}
-  - component: {fileID: 1941439247}
   - component: {fileID: 1941439246}
   m_Layer: 0
   m_Name: Door
@@ -32501,10 +32568,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1605fb40fb5df4e4e9265e824a028157, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _actionsWithDoor: {fileID: 135340950}
   _openSlider: {fileID: 561506649}
   _door: {fileID: 779081393}
-  _offsetY: 3.5
+  _offsetY: 3
 --- !u!4 &1941439245
 Transform:
   m_ObjectHideFlags: 0
@@ -32513,13 +32579,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1941439243}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 369.53, y: 1.275, z: 365}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.745, z: -0.5119934}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 779081393}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1281606655}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1941439246
 Rigidbody:
@@ -32548,27 +32614,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 90
   m_CollisionDetection: 0
---- !u!65 &1941439247
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1941439243}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.808075, y: 2.908459, z: 1}
-  m_Center: {x: -0.03138733, y: -0.15640008, z: 0}
 --- !u!1 &1944110711
 GameObject:
   m_ObjectHideFlags: 0
@@ -36258,4 +36303,4 @@ SceneRoots:
   - {fileID: 202711517}
   - {fileID: 1301029233}
   - {fileID: 1919290122}
-  - {fileID: 1941439245}
+  - {fileID: 1281606655}
