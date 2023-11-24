@@ -28,7 +28,7 @@ public class Interact: MonoBehaviour
             if (hit.collider.gameObject.TryGetComponent(out InteractableObject @object)) {
                 @object.Animation.SetBool("show", true);
                 @object.Animation.SetBool("hide", false);
-                if(@object.GetComponent<Outline>() != null)
+                if (@object.GetComponent<Outline>() != null && !ThirdPersonShooterController.Instance.IsAiming)
                 {
                     @object.GetComponent<Outline>().Show();
                 }
@@ -41,12 +41,12 @@ public class Interact: MonoBehaviour
             }
             else
             {
-                if (tempObj.GetComponent<Outline>() != null)
+                if (tempObj.GetComponent<Outline>() != null && !ThirdPersonShooterController.Instance.IsAiming)
                 {
                     tempObj.GetComponent<Outline>().Hide();
                 }
                 tempObj.Animation.SetBool("show", false);
-                tempObj.Animation.SetBool("hide",true);
+                tempObj.Animation.SetBool("hide", true);
             }
         }
     }

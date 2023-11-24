@@ -6,7 +6,8 @@ using UnityEngine.Events;
 public class InteractableObject : MonoBehaviour
 {
     [SerializeField] private UnityEvent _useEvent;
-    [SerializeField] private Animator _animation;
+   [SerializeField] private Animator _animation;
+
     public Animator Animation
     {
         get
@@ -14,7 +15,7 @@ public class InteractableObject : MonoBehaviour
             return _animation;
         }
     }
-   
+
     public UnityEvent EventBtn
     {
         get

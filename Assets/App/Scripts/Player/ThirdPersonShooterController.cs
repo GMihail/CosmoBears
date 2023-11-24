@@ -12,10 +12,34 @@ public class ThirdPersonShooterController : MonoBehaviour
 
     private StarterAssetsInputs starterAssetsInput;
     private ThirdPersonController thirdPersonController;
+    private Animator animator;
 
 
+    public static ThirdPersonShooterController Instance = null;
+
+    public bool IsAiming
+    {
+        get
+        {
+            return starterAssetsInput.aim;
+        }
+    }
+
+
+    void Start()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else if (Instance == this)
+        {
+            Destroy(gameObject);
+        }
+    }
     private void Awake()
     {
+        animator = GetComponent<Animator>();    
         thirdPersonController = GetComponent<ThirdPersonController>();
         starterAssetsInput = GetComponent<StarterAssetsInputs>();
     }
@@ -36,7 +60,7 @@ public class ThirdPersonShooterController : MonoBehaviour
             _aimVirtualCamera.gameObject.SetActive(true);
             thirdPersonController.SetSensitivity(_aimSensitivity);
             thirdPersonController.SetRotation(false);
-
+            animator.SetLayerWeight(1, Mathf.Lerp(animator.GetLayerWeight(1),1f,Time.deltaTime * 10f));
             Vector3 worldAimTarget = mousWordPos;
             worldAimTarget.y = transform.position.y;
             Vector3 aimDirection = (worldAimTarget - transform.position).normalized;
@@ -46,10 +70,13 @@ public class ThirdPersonShooterController : MonoBehaviour
         }
         else
         {
+            animator.SetLayerWeight(1, Mathf.Lerp(animator.GetLayerWeight(1), 0f, Time.deltaTime * 10f));
             _crosshair.SetActive(false);
             _aimVirtualCamera.gameObject.SetActive(false);
             thirdPersonController.SetSensitivity(_nomalSensitivity);
             thirdPersonController.SetRotation(true);
         }
+
     }
+
 }
