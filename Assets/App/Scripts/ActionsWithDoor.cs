@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ActionsWindow : MonoBehaviour
+public class ActionsWithDoor : MonoBehaviour
 {
     [SerializeField] private GameObject _actionsMenu;
     [SerializeField] private Slider _openSlider;
@@ -15,15 +15,6 @@ public class ActionsWindow : MonoBehaviour
         _door = GetComponent<Transform>();
         _openSlider.minValue = _door.position.y;
         _openSlider.maxValue = _door.position.y + _offsetY;
-    }
-    private void OnTriggerStay(Collider other)
-    {
-        if(Input.GetKeyDown(KeyCode.E)) OpenActionsMenu();
-        if(Input.GetKeyDown(KeyCode.G)) CloseActionsMenu();
-    }
-    private void OnTriggerExit(Collider other)
-    {
-      _actionsMenu.SetActive(false);
     }
     public void OpenActionsMenu()
     {

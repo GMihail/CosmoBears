@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ActionWithBomb : MonoBehaviour
+public class ActionsWithBomb : MonoBehaviour
 {
     [SerializeField] private GameObject _timerButton;
     [SerializeField] private GameObject _10secButton;
@@ -26,21 +26,13 @@ public class ActionWithBomb : MonoBehaviour
         var summ = _timerInt + 10;
         _timerText.text = summ.ToString();
     }
-    private void OnTriggerStay(Collider other)
-    {
-        if (Input.GetKeyDown(KeyCode.E)) OpenActionsWithBomb();
-        if (Input.GetKeyDown(KeyCode.G)) CloseActionsWuthBomb();
-    }
     public void OpenActionsWithBomb()
     {
         _actionsWithBomb.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
     }
-    public void CloseActionsWuthBomb()
+    public void CloseActionsWithBomb()
     {
-        //_10secButton.SetActive(false);
-        //_30secButton.SetActive(false);
-        //_60secButton.SetActive(false);
         _actionsWithBomb.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
     }
