@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1351.3053, g: 1738.8025, b: 3336.5283, a: 1}
+  m_IndirectSpecularColor: {r: 1349.2802, g: 1736.6133, b: 3334.171, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5580,7 +5580,7 @@ GameObject:
   - component: {fileID: 250255163}
   m_Layer: 0
   m_Name: BOMB
-  m_TagString: Item
+  m_TagString: Grenade
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28731,7 +28731,7 @@ GameObject:
   - component: {fileID: 1633948487}
   m_Layer: 0
   m_Name: DOOR
-  m_TagString: Item
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
