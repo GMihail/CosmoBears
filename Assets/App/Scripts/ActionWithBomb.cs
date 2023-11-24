@@ -12,7 +12,6 @@ public class ActionWithBomb : MonoBehaviour
     [SerializeField] private GameObject _60secButton;
     [SerializeField] private GameObject _actionsWithBomb;
     [SerializeField] private Text _timerText;
-    private int _timerInt;
 
     public void TimerButton()
     {
@@ -23,7 +22,9 @@ public class ActionWithBomb : MonoBehaviour
     }
     public void Plus10secButton()
     {
-        _timerText.text = _timerText + "10";
+        var _timerInt = int.Parse(_timerText.text);
+        var summ = _timerInt + 10;
+        _timerText.text = summ.ToString();
     }
     private void OnTriggerStay(Collider other)
     {
