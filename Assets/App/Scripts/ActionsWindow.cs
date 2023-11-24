@@ -18,19 +18,19 @@ public class ActionsWindow : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if(Input.GetKeyDown(KeyCode.E)) Press();
-        if(Input.GetKeyDown(KeyCode.G)) Out();
+        if(Input.GetKeyDown(KeyCode.E)) OpenActionsMenu();
+        if(Input.GetKeyDown(KeyCode.G)) CloseActionsMenu();
     }
     private void OnTriggerExit(Collider other)
     {
       _actionsMenu.SetActive(false);
     }
-    public void Press()
+    public void OpenActionsMenu()
     {
         _actionsMenu.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
     }
-    public void Out()
+    public void CloseActionsMenu()
     {
         _actionsMenu.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
