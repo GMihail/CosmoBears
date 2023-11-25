@@ -64,8 +64,8 @@ public class GameSetup : MonoBehaviour
         timer.Time = Random.Range(minTime, maxTime + 1);
         codeMatrix.Size = Random.Range(codeMatrixMinSize, codeMatrixMaxSize + 1);
         buffer.Size = Random.Range(bufferMinSize, bufferMaxSize + 1);
-        codeSequence.ItemCount = Random.Range(codeSequenceMinItemCount, codeSequenceMaxItemCount + 1);
+        codeSequence.ItemCount = 1;
         codeSequence.MinCodeSize = codeSequenceMinCodeSize;
-        codeSequence.MaxCodeSize = Mathf.Min(buffer.Size, codeSequenceMaxCodeSize);
+        codeSequence.MaxCodeSize = 4;
     }
 }

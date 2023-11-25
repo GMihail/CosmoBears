@@ -49,7 +49,6 @@ public class CodeMatrix : MonoBehaviour
     private Vector2Int currentLocation = Vector2Int.zero;
 
     public int Size { get => size; set => size = value; }
-
     private void Awake()
     {
         codeSelectedChannel.OnEventRaised += OnCodeSelected;

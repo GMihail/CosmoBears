@@ -59,7 +59,7 @@ public class Buffer : MonoBehaviour
     {
         Text t = bufferTexts.Dequeue();
         t.text = code;
-
+        
         codeBuffer.Add(code);
         bufferChangedChannel.RaiseEvent(gameObject, codeBuffer);
 

@@ -63,7 +63,6 @@ public class CodeSequence : MonoBehaviour
         {
             CodeSequenceItem item = Instantiate(codeSequenceItem, transform);
 
-            // TODO: right now, this is just a random code. Add a way to always create a valid code.
             List<string> code = new List<string>();
             int codeSize = Random.Range(MinCodeSize, maxCodeSize + 1);
             for (int j = 0; j < codeSize; j++)
@@ -73,6 +72,7 @@ public class CodeSequence : MonoBehaviour
 
             item.SetCode(code, bufferSize);
         }
+        transform.parent.gameObject.SetActive(false);
     }
 
     private void OnBufferInitialized(GameObject sender, int size)

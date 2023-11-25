@@ -61,7 +61,7 @@ public class CodeSequenceItem : TextItem
         {
             int correctItems = ValidateCode(codeBuffer);
             hasValidCode = correctItems == textItems.Count;
-            hasFailed = !hasValidCode && (textItems.Count - correctItems > bufferSize - codeBuffer.Count); // if 'code size - correct items > remaing buffer slots', fail
+            hasFailed = !hasValidCode && (textItems.Count - correctItems > bufferSize - codeBuffer.Count);
 
             for (int i = 0; i < textItems.Count; i++)
             {
