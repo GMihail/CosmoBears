@@ -8,6 +8,9 @@ TagManager:
   - Water
   - ZipLine
   - wall
+  - CinemachineTarget
+  - In
+  - Out
   layers:
   - Default
   - TransparentFX

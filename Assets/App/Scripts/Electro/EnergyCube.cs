@@ -7,7 +7,6 @@ public class EnergyCube : Energy
 {
     [SerializeField] private TMP_Text _debugText;
 
-   
     private void Update()
     {
         _debugText.text = $"{Power}";
