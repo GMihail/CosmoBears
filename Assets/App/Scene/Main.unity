@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1349.2802, g: 1736.6133, b: 3334.171, a: 1}
+  m_IndirectSpecularColor: {r: 1351.3053, g: 1738.8025, b: 3336.5283, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -535,11 +535,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rayCastPosition: {fileID: 1764578917}
---- !u!20 &22306287 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 8944336655422409496, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
-  m_PrefabInstance: {fileID: 1845939054}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &31069393
 GameObject:
   m_ObjectHideFlags: 0
@@ -2426,7 +2421,7 @@ GameObject:
   - component: {fileID: 125364025}
   m_Layer: 0
   m_Name: Cube2
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5577,7 +5572,6 @@ GameObject:
   - component: {fileID: 250255159}
   - component: {fileID: 250255164}
   - component: {fileID: 250255162}
-  - component: {fileID: 250255163}
   m_Layer: 0
   m_Name: BOMB
   m_TagString: Grenade
@@ -5716,27 +5710,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &250255163
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 250255154}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 1.5595703
-  m_Center: {x: -0.007019043, y: 0, z: 0}
 --- !u!114 &250255164
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10332,7 +10305,7 @@ GameObject:
   - component: {fileID: 521844798}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11780,10 +11753,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37990a7bdc4069946a28cca4bdc40c78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _camera: {fileID: 22306287}
-  _distance: 8
+  _distance: 5
   _bombActionsMenu: {fileID: 250255159}
   _doorActionsMenu: {fileID: 1633948484}
+  _startRayCast: {fileID: 1863821384}
 --- !u!1 &583646803
 GameObject:
   m_ObjectHideFlags: 0
@@ -21588,7 +21561,7 @@ GameObject:
   - component: {fileID: 1217186457}
   m_Layer: 0
   m_Name: Cube1
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26648,7 +26621,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f881170ceb7b8e4abdc84956ed05db0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _actionsMenu: {fileID: 135340950}
+  _actionsMenu: {fileID: 0}
   _openSlider: {fileID: 0}
   _door: {fileID: 0}
   _offsetY: 0
@@ -28726,7 +28699,6 @@ GameObject:
   - component: {fileID: 1633948482}
   - component: {fileID: 1633948481}
   - component: {fileID: 1633948484}
-  - component: {fileID: 1633948485}
   - component: {fileID: 1633948486}
   - component: {fileID: 1633948487}
   m_Layer: 0
@@ -28817,27 +28789,6 @@ MonoBehaviour:
   _openSlider: {fileID: 561506649}
   _door: {fileID: 1633948483}
   _offsetY: 2.5
---- !u!65 &1633948485
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1633948479}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.7687776, y: 2.2750447, z: 13.047637}
-  m_Center: {x: -0.014775039, y: -0.63752115, z: -0.001986027}
 --- !u!65 &1633948486
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33007,6 +32958,9 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 1863821384}
+    - targetCorrespondingSourceObject: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 1764578917}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8944336655422409498, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
@@ -33466,6 +33420,37 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.11139556, y: 0.34789297, z: 0.18879329}
     m_Extent: {x: 0.015894033, y: 0.016496807, z: 0.01649493}
   m_DirtyAABB: 0
+--- !u!1 &1863821383
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1863821384}
+  m_Layer: 0
+  m_Name: Ray
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1863821384
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863821383}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.356, y: -0.115, z: 3.03}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 22306283}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1875357713
 GameObject:
   m_ObjectHideFlags: 0
@@ -36233,7 +36218,7 @@ GameObject:
   - component: {fileID: 1993698720}
   m_Layer: 0
   m_Name: DoorWay
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

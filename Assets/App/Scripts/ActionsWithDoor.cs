@@ -9,6 +9,7 @@ public class ActionsWithDoor : MonoBehaviour
     [SerializeField] private Slider _openSlider;
     [SerializeField] private Transform _door;
     [SerializeField] private float _offsetY;
+    private int _t = 6;
 
     private void Start()
     {
@@ -33,6 +34,13 @@ public class ActionsWithDoor : MonoBehaviour
     public void DoorOpen()
     {
         _door.position = new Vector3(transform.position.x, _openSlider.value, transform.position.z);
+    }
+    public void DoorClose() 
+    {
+        while (_t != 0)
+        {
+            _door.position = new Vector3(transform.position.x, transform.position.y - 0,5, transform.position.z);
+        }
     }
 
 
