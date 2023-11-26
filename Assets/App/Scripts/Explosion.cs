@@ -8,6 +8,11 @@ public class Explosion : MonoBehaviour
     public float _force;
     public float _radius;
     public bool _activate;
+
+    public void Activate()
+    {
+        BombExplode();
+    }
     public void BombExplode()
     {
         Collider[] overLappedColiders = Physics.OverlapSphere(transform.position, _radius); 

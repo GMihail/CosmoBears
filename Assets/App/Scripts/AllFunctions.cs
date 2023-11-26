@@ -42,6 +42,7 @@ public class AllFunctions : MonoBehaviour
             }
             else if (_startTime == -1)
             {
+                Exploid();
                 break;
             }
             _timerText.text =  _startTime.ToString();
