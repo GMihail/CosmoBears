@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1351.3053, g: 1738.8025, b: 3336.5283, a: 1}
+  m_IndirectSpecularColor: {r: 1348.4972, g: 1735.8728, b: 3333.8555, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3687,7 +3687,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 153215096}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 250255159}
+        m_TargetAssemblyTypeName: ActionsWithBomb, Assembly-CSharp
+        m_MethodName: PlusSecButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 60
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &153215096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5572,6 +5584,7 @@ GameObject:
   - component: {fileID: 250255159}
   - component: {fileID: 250255164}
   - component: {fileID: 250255162}
+  - component: {fileID: 250255165}
   m_Layer: 0
   m_Name: BOMB
   m_TagString: Grenade
@@ -5724,6 +5737,70 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _force: 500
   _radius: 30
+  _timerActivate: {fileID: 250255165}
+  _activate: 0
+--- !u!114 &250255165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250255154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a24b2013d739a54f9566195a2c6360f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeLeft: 10
+  _explode: {fileID: 250255164}
+  _bool: {fileID: 250255164}
+  _active: 0
+--- !u!1 &252058262
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 252058263}
+  - component: {fileID: 252058264}
+  m_Layer: 0
+  m_Name: TimerManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &252058263
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252058262}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 431.59564, y: -16.961563, z: 370.414}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &252058264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252058262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f84de65709f418349985f965efcef412, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 10
+  timerText: {fileID: 133600461}
 --- !u!1 &256602180
 GameObject:
   m_ObjectHideFlags: 0
@@ -6172,13 +6249,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 250255159}
-        m_TargetAssemblyTypeName: ActionWithBomb, Assembly-CSharp
-        m_MethodName: Plus10secButton
-        m_Mode: 1
+        m_TargetAssemblyTypeName: ActionsWithBomb, Assembly-CSharp
+        m_MethodName: PlusSecButton
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 10
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -30408,7 +30485,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1744783550}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 250255159}
+        m_TargetAssemblyTypeName: ActionsWithBomb, Assembly-CSharp
+        m_MethodName: PlusSecButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 30
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1744783550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39037,3 +39126,4 @@ SceneRoots:
   - {fileID: 1633948483}
   - {fileID: 250255158}
   - {fileID: 1983713603}
+  - {fileID: 252058263}

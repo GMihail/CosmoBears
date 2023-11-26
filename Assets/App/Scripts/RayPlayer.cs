@@ -19,12 +19,10 @@ public class RayPlayer : MonoBehaviour
             if (hit.transform.gameObject.CompareTag("Door"))
             {
                 if (Input.GetKeyDown(KeyCode.E)) _doorActionsMenu.OpenActionsMenu();
-                //if (Input.GetKeyDown(KeyCode.Escape)) _doorActionsMenu.CloseActionsMenu();
             }
             if (hit.transform.gameObject.CompareTag("Grenade"))
             {
                 if (Input.GetKeyDown(KeyCode.E)) _bombActionsMenu.OpenActionsWithBomb();
-                //if (Input.GetKeyDown(KeyCode.Escape)) _bombActionsMenu.CloseActionsWithBomb();
             }
         }
         if (Input.GetKeyDown(KeyCode.Escape)) _bombActionsMenu.CloseActionsWithBomb();

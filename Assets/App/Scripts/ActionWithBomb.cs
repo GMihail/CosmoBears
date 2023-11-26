@@ -20,10 +20,10 @@ public class ActionsWithBomb : MonoBehaviour
         _60secButton.SetActive(true);
         _timerText.gameObject.SetActive(true);
     }
-    public void Plus10secButton()
+    public void PlusSecButton(int value)
     {
         var _timerInt = int.Parse(_timerText.text);
-        var summ = _timerInt + 10;
+        var summ = _timerInt + value;
         _timerText.text = summ.ToString();
     }
     public void OpenActionsWithBomb()

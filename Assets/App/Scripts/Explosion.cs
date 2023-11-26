@@ -7,9 +7,13 @@ public class Explosion : MonoBehaviour
 {
     public float _force;
     public float _radius;
+    [SerializeField] public TimerBomb _timerActivate;
+    public bool _activate;
     private void Start()
     {
-        BombExplode();
+        _activate = true;
+        _timerActivate.TimerActivate();
+        
     }
     public void BombExplode()
     {
