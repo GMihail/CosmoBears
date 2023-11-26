@@ -7,14 +7,7 @@ public class Explosion : MonoBehaviour
 {
     public float _force;
     public float _radius;
-    [SerializeField] public TimerBomb _timerActivate;
     public bool _activate;
-    private void Start()
-    {
-        _activate = true;
-        _timerActivate.TimerActivate();
-        
-    }
     public void BombExplode()
     {
         Collider[] overLappedColiders = Physics.OverlapSphere(transform.position, _radius); 
