@@ -5,17 +5,18 @@ using UnityEngine.Events;
 
 public class Glove : MonoBehaviour
 {
-    [SerializeField] private UnityEvent _glovesEvents;
     [SerializeField] private float _distance;
     [SerializeField] private LayerMask _layerMask;
     [SerializeField] private List<GlovesInteract> _glovesInteracts;
     [SerializeField] private PhysicsGunInteractionBehavior _gravityGun;
     [SerializeField] private GameObject _light;
+    [SerializeField] private Transform _spawnPosition;
+    [SerializeField] private GameObject _prefab;
+
     public enum Modes
     {
         GravityGun = 0,
-        Energy = 1,
-        Light = 2
+        Light = 1
     }
 
     public Modes _mode;
@@ -27,8 +28,7 @@ public class Glove : MonoBehaviour
         }
     }
 
-    
-        
+
     private void Update()
     {
         if (ThirdPersonShooterController.Instance.IsAiming)
@@ -46,25 +46,7 @@ public class Glove : MonoBehaviour
                 }
             }
 
-            if (_mode == Modes.GravityGun)
-            {
-                _gravityGun.enabled = true;
-            }
-            else
-            {
-                _gravityGun.enabled = false;
-            }
-
-
-            if (_mode == Modes.Light)
-            {
-                _gravityGun.enabled = false;
-                _light.SetActive(true);
-            }
-            else
-            {
-                _light.SetActive(false);
-            }
+            
 
 
             foreach (GlovesInteract outline in _glovesInteracts)
@@ -79,14 +61,7 @@ public class Glove : MonoBehaviour
                 outline.GetComponent<Outline>().Hide();
             }
 
-            if (_mode == Modes.GravityGun)
-            {
-                _gravityGun.enabled = false;
-            }
-            if (_mode == Modes.Light)
-            {
-                _light.SetActive(false);
-            }
+          
         }
         
     }

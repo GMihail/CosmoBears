@@ -13,7 +13,8 @@ namespace Triggers
             press_F,
             left_mouse,
             right_mouse,
-            collision_with_object
+            collider_with_object,
+            trigger_with_object
         }
 
         public enum TargetsList //список целей для 
@@ -59,7 +60,20 @@ namespace Triggers
         {
             if (called_event != null)
             {
-                if (triggers == Triggers.collision_with_object)
+                if (triggers == Triggers.trigger_with_object)
+                {
+                    if (collision.gameObject.CompareTag(target.ToString()))
+                    {
+                        called_event.Invoke();
+                    }
+                }
+            }
+        }
+        private void OnCollisionEnter(Collision collision) //триггер касания
+        {
+            if (called_event != null)
+            {
+                if (triggers == Triggers.collider_with_object)
                 {
                     if (collision.gameObject.CompareTag(target.ToString()))
                     {

@@ -6,23 +6,19 @@ using UnityEngine;
 public class EnergyCube : Energy
 {
     [SerializeField] private TMP_Text _debugText;
-
+    private OutEnergy _outEnergy;
+    private InEnergy _inEnergy;
     private void Update()
     {
         _debugText.text = $"{Power}";
     }
 
-    private void OnCollisionEnter(Collision collision)
+    public void SetPower()
     {
-        if (collision.collider.TryGetComponent(out OutEnergy outEnergy))
-        {
-           Power = outEnergy.Wire.Power-1;
-        }
-        if (collision.collider.TryGetComponent(out InEnergy inEnergy))
-        {
-            Debug.Log("Fsdf");
-            inEnergy.Wire.Power = Power-1;
-        }
+        Power = _outEnergy.Wire.Power - 1;
     }
-  
+    public void SharePower()
+    {
+        _inEnergy.Wire.Power = Power - 1;
+    }
 }

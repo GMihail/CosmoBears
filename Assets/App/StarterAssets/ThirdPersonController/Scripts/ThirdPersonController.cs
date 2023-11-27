@@ -406,5 +406,10 @@ namespace StarterAssets
         {
             _rotateOnMove = rotate;
         }
+
+        public float GetAnimationBlend()
+        {
+            return _animationBlend;
+        }
     }
 }
