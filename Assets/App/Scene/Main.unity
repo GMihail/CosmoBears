@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1352.1787, g: 1739.7161, b: 3337.3735, a: 1}
+  m_IndirectSpecularColor: {r: 1351.3053, g: 1738.8025, b: 3336.5283, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -25812,7 +25812,10 @@ VisualEffect:
     m_Vector3f:
       m_Array: []
     m_Vector4f:
-      m_Array: []
+      m_Array:
+      - m_Value: {x: 2072.1675, y: 2072.1675, z: 2072.1675, w: 0}
+        m_Name: ParticleColor
+        m_Overridden: 1
     m_Uint:
       m_Array: []
     m_Int:
