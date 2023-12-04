@@ -6,22 +6,17 @@ using UnityEditor;
 
 public class ActivateBridge : MonoBehaviour
 {
-    public Vector3 _startPosition;
-    public Vector3 _endPosition;
-    public float _step;
-    private float _progress;
-    [SerializeField] private bool _buttonPress = false;
-
-    private void Start()
-    {
-        transform.position = _startPosition;
-    }
+    public bool _buttonPress;
+    public GameObject _bridge;
     private void FixedUpdate()
     {
-        if (_buttonPress)
+        if (_buttonPress) 
         {
-            transform.position = Vector3.Lerp(_startPosition, _endPosition, _progress);
-            _progress += _step;
+            _bridge.SetActive(true);
+        }
+        else
+        {
+            _bridge.SetActive(false);
         }
     }
     private void OpenBridge()
