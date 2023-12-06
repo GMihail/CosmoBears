@@ -35,7 +35,7 @@ Material:
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3400
+  m_CustomRenderQueue: 3000
   stringTagMap:
     MotionVector: User
     RenderType: Transparent
@@ -66,7 +66,7 @@ Material:
     - _AddPrecomputedVelocity: 0
     - _AlphaCutoffEnable: 0
     - _AlphaDstBlend: 1
-    - _AlphaSrcBlend: 0
+    - _AlphaSrcBlend: 1
     - _BlendMode: 1
     - _ConservativeDepthOffsetEnable: 0
     - _CullMode: 2
@@ -79,16 +79,16 @@ Material:
     - _EnableBlendModePreserveSpecularLighting: 1
     - _EnableFogOnTransparent: 1
     - _ExcludeFromTUAndAA: 0
-    - _FourceBridgeWhite: 4.41
+    - _FourceWhite: 25
     - _OpaqueCullMode: 2
     - _RayTracing: 0
     - _ReceivesSSR: 1
     - _ReceivesSSRTransparent: 0
     - _RefractionModel: 0
-    - _RenderQueueType: 5
+    - _RenderQueueType: 4
     - _RequireSplitLighting: 0
-    - _Scale: 25
-    - _Scale_1: 20.9
+    - _Scale: -1000
+    - _Scale_1: 20
     - _SrcBlend: 1
     - _StencilRef: 0
     - _StencilRefDepth: 0
@@ -115,8 +115,8 @@ Material:
     - _ZTestTransparent: 4
     - _ZWrite: 0
     m_Colors:
-    - _BaseColor: {r: 27.857622, g: 0, b: 1.1701479, a: 0}
+    - _BaseColor: {r: 77.8743, g: 77.8743, b: 77.8743, a: 1}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
-    - _FourceBridgeSpeed: {r: -0.5, g: 0.4, b: 0, a: 0}
+    - _FourceBridgeSpeed: {r: 0.002, g: 0.009, b: 0, a: 0}
   m_BuildTextureStacks: []

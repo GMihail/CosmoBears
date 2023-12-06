@@ -688,10 +688,10 @@
     "m_Guid": {
         "m_GuidSerialized": "e02840bb-5f92-4455-9d69-91bcffb116db"
     },
-    "m_Name": "FourceBridgeWhite",
+    "m_Name": "FourceWhite",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "FourceBridgeWhite",
-    "m_DefaultReferenceName": "_FourceBridgeWhite",
+    "m_RefNameGeneratedByDisplayName": "FourceWhite",
+    "m_DefaultReferenceName": "_FourceWhite",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
@@ -701,7 +701,7 @@
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
-    "m_Value": 4.409999847412109,
+    "m_Value": 25.0,
     "m_FloatType": 0,
     "m_RangeValues": {
         "x": 0.0,
@@ -1703,7 +1703,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "68a6c762877646839a20e024d2b37ac1",
     "m_Id": 0,
-    "m_DisplayName": "FourceBridgeWhite",
+    "m_DisplayName": "FourceWhite",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -2592,7 +2592,7 @@
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
-    "m_Value": 20.899999618530275,
+    "m_Value": 20.0,
     "m_FloatType": 0,
     "m_RangeValues": {
         "x": 0.0,
@@ -2659,7 +2659,7 @@
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
-    "m_Value": 25.0,
+    "m_Value": -1000.0,
     "m_FloatType": 0,
     "m_RangeValues": {
         "x": 0.0,
@@ -2688,8 +2688,8 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "x": -0.5,
-        "y": 0.4000000059604645,
+        "x": 0.0020000000949949028,
+        "y": 0.008999999612569809,
         "z": 0.0,
         "w": 0.0
     }
