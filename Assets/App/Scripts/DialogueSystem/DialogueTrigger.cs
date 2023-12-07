@@ -13,14 +13,10 @@ public class DialogueTrigger : MonoBehaviour
 {
     [SerializeField] private DialogueManager _manager;
     [SerializeField] private DialogueSystems[] _dialogueSystems;
+    [SerializeField] private string _dialogueNameForPlay;
     public DialogueManager Manager
     {
         get { return _manager; }
-    }
-
-    private void Start()
-    {
-        PlayDialogue("test2");
     }
 
     public void PlayDialogue(string name)
@@ -31,6 +27,14 @@ public class DialogueTrigger : MonoBehaviour
            {
                 StartCoroutine(item.dialogueSystem.ShowDialogue());
            }
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            PlayDialogue(_dialogueNameForPlay);
         }
     }
 

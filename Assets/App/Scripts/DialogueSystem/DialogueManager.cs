@@ -3,6 +3,8 @@ using GoSystem;
 using StarterAssets;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,6 +15,8 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private TMP_Text _name;
     [SerializeField] private TMP_Text _text;
     [SerializeField] private Dialogue _dialoguePreset;
+    [SerializeField] private float _timeBtwChars;
+    [SerializeField] private float _timeBtwWords;
     public Dialogue DialoguePreset
     {
         private get
@@ -33,12 +37,6 @@ public class DialogueManager : MonoBehaviour
             _text.text = _dialoguePreset.Text;
         }
     }
-    private void OnEnable()
-    {
-     
-    }
-    private void OnDisable()
-    {
-       
-    }
+
+  
 }
