@@ -32,14 +32,14 @@ public class Glove : MonoBehaviour
 
     private void Update()
     {
-        if (_playerStatistic.Power > 0) 
-        {
-            _gravityGun.gameObject.SetActive(true);
-        }
-        else if (_playerStatistic.Power <= 0)
-        {
-            _gravityGun.gameObject.SetActive(false);
-        }
+        //if (_playerStatistic.Power > 0) 
+        //{
+        //    _gravityGun.gameObject.SetActive(true);
+        //}
+        //else if (_playerStatistic.Power <= 0)
+        //{
+        //    _gravityGun.gameObject.SetActive(false);
+        //}
         if (ThirdPersonShooterController.Instance.IsAiming)
         {
            
@@ -55,10 +55,7 @@ public class Glove : MonoBehaviour
                     }
                 }
             }
-            if (Input.GetMouseButton(0))
-            {
-                _playerStatistic.TakePower(0.1f);
-            }
+           
 
             foreach (GlovesInteract outline in _glovesInteracts)
             {

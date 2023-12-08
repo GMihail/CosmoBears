@@ -59,6 +59,7 @@ public class PhysicsGunInteractionBehavior : MonoBehaviour
     private float                   _snappedRotationSens    = 15f;
     [SerializeField]
     private float                   _rotationSpeed          = 5f;
+    [SerializeField] private PlayerStatistic _playerStatistic;
 
     private Quaternion              _desiredRotation        = Quaternion.identity;
 
@@ -192,14 +193,24 @@ public class PhysicsGunInteractionBehavior : MonoBehaviour
         {
             // We are not holding the mouse button. Release the object and return before checking for a new one
             if (_grabbedRigidbody != null)
-            {                
+            {
                 ReleaseObject();
             }
 
             _justReleased = false;
             return;
         }
-
+        if (Input.GetMouseButton(0))
+        {
+            if (_grabbedRigidbody != null)
+            {
+                _playerStatistic.TakePower(0.01f);
+            }
+        }
+        if (_playerStatistic.Power < 0)
+        {
+            ReleaseObject();
+        }
         if (_grabbedRigidbody == null && !_justReleased)
         {
 
@@ -213,6 +224,7 @@ public class PhysicsGunInteractionBehavior : MonoBehaviour
 #endif
             if (Physics.Raycast(ray, out hit, _maxGrabDistance, _grabLayer))
             {
+
                 // Don't pick up kinematic rigidbodies (they can't move)
                 if (hit.rigidbody != null && !hit.rigidbody.isKinematic)
                 {
@@ -230,6 +242,7 @@ public class PhysicsGunInteractionBehavior : MonoBehaviour
                     _grabbedRigidbody.interpolation     = RigidbodyInterpolation.Interpolate;
                     OnObjectGrabbed.Invoke(_grabbedRigidbody.gameObject);
                     _grabbedRigidbody.gameObject.GetComponent<Outline>().Show();
+                   
 #if UNITY_EDITOR
                     Debug.DrawRay(hit.point, hit.normal * 10f, Color.red, 10f);
 #endif
@@ -527,6 +540,7 @@ public class PhysicsGunInteractionBehavior : MonoBehaviour
         StartPoint                                  = _zeroVector3;
         MidPoint                                    = _zeroVector3;
         EndPoint                                    = _zeroVector3;
+
         //OnObjectGrabbed.Invoke(null);
     }
     #endregion
