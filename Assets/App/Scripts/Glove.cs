@@ -12,7 +12,6 @@ public class Glove : MonoBehaviour
     [SerializeField] private GameObject _light;
     [SerializeField] private Transform _spawnPosition;
     [SerializeField] private GameObject _prefab;
-    [SerializeField] private PlayerStatistic _playerStatistic;
 
     public enum Modes
     {
@@ -32,17 +31,8 @@ public class Glove : MonoBehaviour
 
     private void Update()
     {
-        if (_playerStatistic.Power > 0) 
-        {
-            _gravityGun.gameObject.SetActive(true);
-        }
-        else if (_playerStatistic.Power <= 0)
-        {
-            _gravityGun.gameObject.SetActive(false);
-        }
         if (ThirdPersonShooterController.Instance.IsAiming)
         {
-           
             if (Input.GetMouseButtonDown(0)){
                 Vector3 mousWordPos = Vector3.zero;
                 Vector2 screenCenterPoint = new Vector2(Screen.width / 2f, Screen.height / 2);
@@ -55,10 +45,9 @@ public class Glove : MonoBehaviour
                     }
                 }
             }
-            if (Input.GetMouseButton(0))
-            {
-                _playerStatistic.TakePower(0.1f);
-            }
+
+            
+
 
             foreach (GlovesInteract outline in _glovesInteracts)
             {

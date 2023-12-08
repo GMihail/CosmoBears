@@ -3,33 +3,30 @@ using UnityEngine.UI;
 
 public class PlayerStatistic : MonoBehaviour
 {
-    [SerializeField] private float _power;
-    [SerializeField] private Slider _powerSlider;
-
-    public float Power { get => _power; set => _power = value; }
+    [SerializeField] private float _health;
+    [SerializeField] private Slider _hpSlider;
 
     private void Start()
     {
-        _powerSlider.minValue = 0;
-        _powerSlider.maxValue = Power;
-        _powerSlider.value = Power;
+        _hpSlider.minValue = 0;
+        _hpSlider.maxValue = _health;
+        _hpSlider.value = _health;
     }
 
     private void Update()
     {
-        _powerSlider.value = Power;
+        _hpSlider.value = _health;
     }
 
-    public void TakePower(float value)
+    public void TakeDamage(float value)
     {
-        if(Power < 0) return;
         if(value <= 0) return;
-        Power -= value;
+        _health -= value;
     }
-    public void AddPower(float value)
+    public void AddHealth(float value)
     {
         if (value <= 0) return;
-       Power += value;
+       _health += value;
     }
     
 }
