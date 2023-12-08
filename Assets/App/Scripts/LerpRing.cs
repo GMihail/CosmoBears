@@ -54,7 +54,7 @@ public class LerpRing : MonoBehaviour
             if (transform.position == _startPosition)
             { 
                 _direction = true;
-                _progress = 0;
+                //_progress = 0;
             }
         }
     }
