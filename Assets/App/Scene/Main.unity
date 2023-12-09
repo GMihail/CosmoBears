@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1349.9336, g: 1737.3097, b: 3335.04, a: 1}
+  m_IndirectSpecularColor: {r: 1352.5958, g: 1740.9514, b: 3341.5005, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2574,7 +2574,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 34ffe6a98945e9242974395b94e99069, type: 2}
+  - {fileID: 2100000, guid: 943c121fd95cf8444a2b2452186344eb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -46454,6 +46454,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 381380718858844753, guid: 0a2b4d142e97a7b45af8d320045b5365, type: 3}
+      propertyPath: m_Asset
+      value: 
+      objectReference: {fileID: 8926484042661614526, guid: 75246e84984b47e4f9d014d098faac73, type: 3}
     - target: {fileID: 3396611160227903024, guid: 0a2b4d142e97a7b45af8d320045b5365, type: 3}
       propertyPath: m_Name
       value: Sparks
@@ -46632,6 +46636,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3118983777173486989, guid: 7b0d836050a525b41a4bbef2ba045ab7, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 943c121fd95cf8444a2b2452186344eb, type: 2}
+    - target: {fileID: 3118983777173486989, guid: 7b0d836050a525b41a4bbef2ba045ab7, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 943c121fd95cf8444a2b2452186344eb, type: 2}
     - target: {fileID: 5093027621033541072, guid: 7b0d836050a525b41a4bbef2ba045ab7, type: 3}
       propertyPath: _player
       value: 
